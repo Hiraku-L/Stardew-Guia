@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receitas</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    
+    <style>
+        .checkbox-container {
+        position: relative;
+        }
+        .checkbox-image {
+        position: absolute;
+        cursor: pointer;
+        }
+        /* Esconda o checkbox padrão */
+        input[type="checkbox"] {
+        display: none;
+        }
+        /* Estilize a imagem quando o checkbox estiver marcado */
+        input[type="checkbox"]:checked + .checkbox-image img {
+        /* Adicione um estilo de destaque à imagem quando o checkbox estiver marcado */
+        opacity: 50%;
+        }
+        .background{
+            background-image: "./imagens/";
+        }
+        .box1{
+            max-width: 300px !important;
+            margin: 0px;
+        }
+        .receitas{
+            padding: 10px;
+            margin-bottom: 30px;
+        }
+        .checkbox-container {
+            display: inline-block;
+            margin-right: 50px; 
+        }
+        .item-container {
+            display: flex;
+        }
+        .body{
+            font-size: 50px !important;
+        }
+        .custom-card{
+            margin: 5px !important;
+
+        }
+        @media only screen and (max-width: 600px) {
+        body {
+            .card-body{
+                max-width: 90px;
+                margin: 0 !important;
+                padding: 5px !important;
+            }
+            .receitas{
+            margin-bottom: 50px;
+            display: block;
+            min-width: 290px !;
+            max-width: 600px;
+        }
+        .checkbox-container {
+            margin: 25px;
+        }
+        }
+    }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <h2 class="text-center mb-2">Receitas</h2>
+        <div class="receitas">
+            <div class="checkbox-container">
+                <input type="checkbox" id="ovo_frito">
+                <label for="ovo_frito" class="checkbox-image">
+                    <img src="Imagens/receitas/ovo_frito.png">
+                </label>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="omelete">
+                <label for="omelete" class="checkbox-image">
+                    <img src="Imagens/receitas/omelete.png">
+                </label>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="salada">
+                <label for="salada" class="checkbox-image">
+                    <img src="Imagens/receitas/salada.png">
+                </label>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="couve_flor_com_queijo">
+                <label for="couve_flor_com_queijo" class="checkbox-image">
+                <img src="Imagens/receitas/couve_flor_com_queijo.png">
+                </label>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="peixe_cozido">
+                <label for="peixe_cozido" class="checkbox-image">
+                <img src="Imagens/receitas/peixe_cozido.png">
+                </label>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="sopa_de_chirivia">
+                <label for="sopa_de_chirivia" class="checkbox-image">
+                <img src="Imagens/receitas/sopa_de_chirivia.png">
+                </label>
+            </div>
+        </div>
+        
+   
+
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-2">
+                    <h2>Itens Necessários</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card custom-card d-flex flex-column align-items-center m-2">
+                        <h3 class="custom-heading">Produtos Animais</h3>
+                        <div class="item-container d-flex">
+                            <!-- Conteúdo dos produtos animais aqui -->
+                            <div class="card custom-card box1">
+                                <div class="card-body d-flex align-items-center w-auto">
+                                    <label class="mr-3">
+                                        <input type="checkbox" id="">
+                                        <img src="Imagens/receitas/ovo.png">
+                                    </label>
+                                    <div id="ovo" class="custom-text"></div>
+                                </div>
+                            </div>
+                            <div class="card custom-card box1">
+                                <div class="card-body d-flex align-items-center w-auto">
+                                    <label class="mr-3">
+                                        <input type="checkbox" id="">
+                                        <img src="Imagens/receitas/queijo.png">
+                                    </label>
+                                    <div id="queijo" class="custom-text"></div>
+                                </div>
+                            </div>
+                            <div class="card custom-card box1">
+                                <div class="card-body d-flex align-items-center w-auto">
+                                    <label class="mr-3">
+                                        <input type="checkbox" id="">
+                                        <img src="Imagens/receitas/leite.png">
+                                    </label>
+                                    <div id="leite" class="custom-text"></div>
+                                </div>
+                            </div>
+                            <!-- Adicione mais itens conforme necessário -->
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-md-4">
+                    <div class="card custom-card d-flex flex-column align-items-center m-2">
+                        <h3 class="custom-heading">Lavouras</h3>
+                        <div class="item-container d-flex">
+                            <!-- Conteúdo das lavouras aqui -->
+                            <div class="card custom-card box1">
+                                <div class="card-body d-flex align-items-center w-auto">
+                                    <label class="mr-3">
+                                        <input type="checkbox" id="">
+                                        <img src="Imagens/receitas/couve_flor.png">
+                                    </label>
+                                    <div id="couve_flor" class="custom-text"></div>
+                                </div>
+                            </div>
+                            <!-- Adicione mais itens conforme necessário -->
+                            <div class="card custom-card box1">
+                                <div class="card-body d-flex align-items-center w-auto">
+                                    <label class="mr-3">
+                                        <input type="checkbox" id="">
+                                        <img src="Imagens/receitas/chirivia.png">
+                                    </label>
+                                    <div id="chirivia" class="custom-text"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-md-4">
+                    <div class="card custom-card d-flex flex-column align-items-center m-2">
+                        <h3 class="custom-heading">Armazém do Pierre</h3>
+                        <div class="item-container d-flex">
+                            <!-- Conteúdo do Armazém do Pierre aqui -->
+                            <div class="card custom-card box1">
+                                <div class="card-body d-flex align-items-center w-auto">
+                                    <label class="mr-3">
+                                        <input type="checkbox" id="">
+                                        <img src="Imagens/receitas/vinagre.png">
+                                    </label>
+                                    <div id="vinagre" class="custom-text"></div>
+                                </div>
+                            </div>
+                            <!-- Adicione mais itens conforme necessário -->
+                            <div class="card custom-card box1">
+                                <div class="card-body d-flex align-items-center w-auto">
+                                    <label class="mr-3">
+                                        <input type="checkbox" id="">
+                                        <img src="Imagens/receitas/farinha.png">
+                                    </label>
+                                    <div id="farinha" class="custom-text"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Adicione mais colunas conforme necessário para novas categorias -->
+                <div class="col-md-4">
+                    <div class="card custom-card d-flex flex-column align-items-center m-2">
+                        <h3 class="custom-heading">Coleta</h3>
+                        <div class="item-container d-flex">
+                            <!-- Conteúdo do Armazém do Pierre aqui -->
+                            <div class="card custom-card box1">
+                                <div class="card-body d-flex align-items-center w-auto">
+                                    <label class="mr-3">
+                                        <input type="checkbox" id="">
+                                        <img src="Imagens/receitas/alho_poro.png">
+                                    </label>
+                                    <div id="alho_poro" class="custom-text"></div>
+                                </div>
+                            </div>
+                            <!-- Adicione mais itens conforme necessário -->
+                            <div class="card custom-card box1">
+                                <div class="card-body d-flex align-items-center w-auto">
+                                    <label class="mr-3">
+                                        <input type="checkbox" id="">
+                                        <img src="Imagens/receitas/dente_de_leao.png">
+                                    </label>
+                                    <div id="dente_de_leao" class="custom-text"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card custom-card d-flex flex-column align-items-center m-2">
+                        <h3 class="custom-heading">Pesca</h3>
+                        <div class="item-container d-flex">
+                            <!-- Conteúdo do Armazém do Pierre aqui -->
+                            <div class="card custom-card box1">
+                                <div class="card-body d-flex align-items-center w-auto">
+                                    <label class="mr-3">
+                                        <input type="checkbox" id="">
+                                        
+                                        <img src="Imagens/receitas/qualquer_peixe.png">
+                                    </label>  
+                                    <div id="qualquer_peixe" class="custom-text"></div>
+                                </div>
+                            </div>
+                            <!-- Adicione mais itens conforme necessário -->
+                            <div class="card custom-card box1">
+                                <div class="card-body d-flex align-items-center w-auto">
+                                    <label class="mr-3">
+                                        <input type="checkbox" id="">
+                                        <img src="Imagens/aquario/brema.png">
+                                    </label>
+                                    <div id="brema" class="custom-text"></div>
+                                </div>
+                            </div>
+                            <div class="card custom-card box1">
+                                <div class="card-body d-flex align-items-center w-auto">
+                                    <label class="mr-3">
+                                        <input type="checkbox" id="">
+                                        <img src="Imagens/aquario/peixe-sol.png">
+                                    </label>
+                                    <div id="peixe_sol" class="custom-text"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <script>
+        let ovo = 14;
+        let leite = 13;
+        let vinagre = 4;
+        let alho_poro = 1;
+        let dente_de_leao  = 1;
+        let queijo  = 3;
+        let couve_flor  = 1;
+        let qualquer_peixe  = 2;
+        let brema  = 1;
+        let peixe_sol = 1;
+        let farinha = 24;
+        let chirivia =2; 
+
+        const ovo_frito = document.getElementById('ovo_frito');
+        const omelete = document.getElementById('omelete');
+        const salada = document.getElementById('salada');
+        const couve_flor_com_queijo = document.getElementById('couve_flor_com_queijo');
+        const peixe_cozido = document.getElementById('peixe_cozido');
+        const sopa_de_chirivia = document.getElementById('sopa_de_chirivia');
+        
+
+        const _ovo = document.getElementById('ovo');
+        const _leite = document.getElementById('leite');
+        const _vinagre = document.getElementById('vinagre');
+        const _alho_poro = document.getElementById('alho_poro');
+        const _dente_de_leao = document.getElementById('dente_de_leao');
+        const _queijo = document.getElementById('queijo');
+        const _couve_flor = document.getElementById('couve_flor');
+        const _brema = document.getElementById('brema');
+        const _peixe_sol = document.getElementById('peixe_sol');
+        const _farinha = document.getElementById('farinha');
+        const _chirivia = document.getElementById('chirivia');
+        
+
+
+        _ovo.textContent = ovo;
+        _leite.textContent = leite;
+        _vinagre.textContent = vinagre;
+        _alho_poro.textContent = alho_poro;
+        _dente_de_leao.textContent = dente_de_leao;
+        _queijo.textContent = queijo;
+        _couve_flor.textContent = couve_flor;
+        _brema.textContent = brema;
+        _peixe_sol.textContent = peixe_sol;
+        _farinha.textContent = farinha;
+
+
+        ovo_frito.addEventListener('change', function() {
+            if (ovo_frito.checked) {
+                ovo = ovo - 1;
+            } else {
+                ovo = ovo+1
+            }
+            // Atualiza o conteúdo da div _ovo com o valor atualizado de ovo
+            _ovo.textContent = ovo;
+        });
+        // Define o conteúdo inicial da div _ovo com o valor inicial de ovo
+        
+
+        omelete.addEventListener('change', function() {
+            if (omelete.checked) {
+                leite = leite - 1;
+                ovo = ovo - 1;
+            } 
+            else {
+                ovo = ovo + 1
+                leite =leite+1
+            }
+            _ovo.textContent = ovo;
+            _leite.textContent = leite;
+        });
+        
+        salada.addEventListener('change', function() {
+            if (salada.checked) {
+                vinagre = vinagre - 1;
+                alho_poro = alho_poro - 1;
+                dente_de_leao = dente_de_leao - 1;
+            } 
+            else {
+                vinagre = vinagre + 1;
+                alho_poro = alho_poro + 1;
+                dente_de_leao = dente_de_leao + 1;
+            }
+            _vinagre.textContent = vinagre;
+            _alho_poro.textContent = alho_poro;
+            _dente_de_leao.textContent = dente_de_leao;
+        });
+        couve_flor_com_queijo.addEventListener('change', function() {
+            if (couve_flor_com_queijo.checked) {
+                queijo = queijo - 1;
+                couve_flor = couve_flor - 1;
+            } 
+            else {
+                queijo = queijo + 1;
+                couve_flor = couve_flor + 1;
+            }
+            _queijo.textContent = queijo;
+            _couve_flor.textContent = couve_flor;
+        });
+        peixe_cozido.addEventListener('change', function() {
+            if (peixe_cozido.checked) {
+                brema = brema - 1;
+                peixe_sol = peixe_sol - 1;
+                farinha = farinha - 1;
+            } 
+            else {
+                brema = brema + 1;
+                peixe_sol = peixe_sol + 1;
+                farinha = farinha + 1;
+            }
+            _brema.textContent = brema;
+            _peixe_sol.textContent = peixe_sol;
+            _farinha.textContent = farinha;
+        });
+        sopa_de_chirivia.addEventListener('change', function() {
+            if (sopa_de_chirivia.checked) {
+                leite = leite - 1;
+                vinagre = vinagre - 1;
+                chirivia = chirivia -1;
+            } 
+            else {
+                leite = leite + 1;
+                vinagre = vinagre + 1;
+                chirivia = chirivia +1;
+            }
+            _leite.textContent = leite;
+            _vinagre.textContent = vinagre;
+            _chirivia.textContent = chirivia;
+        });
+    </script>
+</body>
+</html>

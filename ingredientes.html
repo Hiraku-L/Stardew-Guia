@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingredientes - Perfeição</title>
+    <style>
+        /* Estilos para melhorar a aparência */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #search-input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+        }
+        #item-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .item {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Stardew Guia</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <h1>Lista de Itens</h1>
+
+<!-- Campo de busca em tempo real -->
+<input type="text" id="search-input" placeholder="Digite para buscar">
+
+<!-- Lista de itens -->
+<ul id="item-list">
+    <h2>Receitas que são ingredientes</h2>
+    <li class="item">Batata-palha (3)</li>
+    <li class="item">Omelete (2)</li>
+    <li class="item">Ovo frito (2)</li>
+    <li class="item">Panquecas (2)</li>
+    <li class="item">Pão (4)</li>
+    <li class="item">Tortilha (3)</li>
+
+    <h2>Ingredientes por tipo</h2>
+    <li class="item">Armazém do Pierre</li>
+    <li class="item">Arroz (2)</li>
+    <li class="item">Açúcar (16)</li>
+    <li class="item">Farinha de Trigo (24)</li>
+    <li class="item">Óleo (12)</li>
+    <li class="item">Vinagre (4)</li>
+
+    <h2>Árvore com Torneirinha</h2>
+    <li class="item">Xarope de ácer (1)</li>
+
+    <h2>Árvores frutíferas</h2>
+    <li class="item">Banana (1)</li>
+    <li class="item">Damasco (1)</li>
+    <li class="item">Manga (1)</li>
+    <li class="item">Maçã (1)</li>
+
+    <h2>Coleta</h2>
+    <li class="item">Alho-poró (1)</li>
+    <li class="item">Ameixa selvagem (2)</li>
+    <li class="item">Amora (2)</li>
+    <li class="item">Avelã (4)</li>
+    <li class="item">Broto de samambaia (1)</li>
+    <li class="item">Coco (2)</li>
+    <li class="item">Cogumelo comum (3)</li>
+    <li class="item">Dente-de-leão (1)</li>
+    <li class="item">Gengibre (3)</li>
+    <li class="item">Morel (1)</li>
+    <li class="item">Raiz de inverno (1)</li>
+
+    <h2>Covo</h2>
+    <li class="item">Camarão (2)</li>
+    <li class="item">Caramujo (2)</li>
+    <li class="item">Caranguejo (1)</li>
+    <li class="item">Concha (1)</li>
+    <li class="item">Lagosta (1)</li>
+    <li class="item">Lagostim (1)</li>
+    <li class="item">Lesma (1)</li>
+    <li class="item">Mexilhão (1)</li>
+
+    <h2>Lago de Peixes (Construção)</h2> 
+    <li class="item">Tinta de Lula (2)</li>
+
+    <h2>Lavouras</h2> 
+    <li class="item">Abacaxi (1)</li>
+    <li class="item">Abóbora (3)</li>
+    <li class="item">Alcachofra (2)</li>
+    <li class="item">Alho (2)</li>
+    <li class="item">Amaranto (1)</li>
+    <li class="item">Batata (3)</li>
+    <li class="item">Berinjela (2)</li>
+    <li class="item">Beterraba (1)</li>
+    <li class="item">Chirívia (2)</li>
+    <li class="item">Couve (2)</li>
+    <li class="item">Couve chinesa (1)</li>
+    <li class="item">Couve-flor (1)</li>
+    <li class="item">Inhame (2)</li>
+    <li class="item">Jasmim-azul (1)</li>
+    <li class="item">Melão (2)</li>
+    <li class="item">Milho (3)</li>
+    <li class="item">Mirtilo (2)</li>
+    <li class="item">Oxicoco (4)</li>
+    <li class="item">Papoula (1)</li>
+    <li class="item">Pimenta quente (3)</li>
+    <li class="item">Rabanete (2)</li>
+    <li class="item">Repolho roxo (3)</li>
+    <li class="item">Ruibarbo (1)</li>
+    <li class="item">Tomate (8)</li>
+    <li class="item">Vagem (2)</li>
+
+    <h2>Minas</h2><!--  -->
+    <li class="item">Cenoura subterrânea (5)</li>
+
+    <h2>Pesca</h2><!--  -->
+    <li class="item">Qualquer peixe (2)</li>
+    <li class="item">Achigã (1)</li>
+    <li class="item">Atum (1)</li>
+    <li class="item">Brema (1)</li>
+    <li class="item">Carpa (4)</li>
+    <li class="item">Carpa da meia-noite (1)</li>
+    <li class="item">Enguia (2)</li>
+    <li class="item">Linguado (1)</li>
+    <li class="item">Lula (1)</li>
+    <li class="item">Peixe-sol (1)</li>
+    <li class="item">Pepino-do-mar (1)</li>
+    <li class="item">Salmão (1)</li>
+    <li class="item">Sardinha (2)</li>
+    <li class="item">Truta arco-íris (1)</li>
+
+    <h2>Praia</h2><!--  -->
+    <li class="item">Algas brancas (2)</li>
+    <li class="item">Algas marinhas (1)</li>
+    <li class="item">Algas verdes (5)</li>
+    <h2>Produto Animal</h2><!--  -->
+<li class="item">Leite (13)</li>
+<li class="item">Maionese (2)</li>
+<li class="item">Maionese nula (1)</li>
+<li class="item">Ovo (14)</li>
+<li class="item">Queijo (3)</li>
+
+
+<h2>Saloon</h2><!--  -->
+<li class="item">Café (3)</li>
+</ul>
+<script>
+    // Elementos HTML
+    var searchInput = document.getElementById("search-input");
+    var itemList = document.getElementById("item-list").getElementsByTagName("li");
+
+    // Evento de entrada de texto para busca em tempo real
+    searchInput.addEventListener("input", function() {
+        var query = searchInput.value.toLowerCase();
+
+        // Iterar pelos itens e mostrar/ocultar com base na pesquisa
+        for (var i = 0; i < itemList.length; i++) {
+            var itemText = itemList[i].textContent.toLowerCase();
+            var item = itemList[i];
+
+            if (itemText.includes(query)) {
+                item.style.display = "block"; // Mostrar itens correspondentes
+            } else {
+                item.style.display = "none"; // Ocultar itens não correspondentes
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
+</body>
+</html>

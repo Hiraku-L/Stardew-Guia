@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Stardew Guia</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .header {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .search-input {
+            width: 70%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        .search-button {
+            width: 15%;
+            padding: 10px;
+            background-color: #0078d4;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .filter {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .filter-item {
+            padding: 5px 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            background-color: #eee;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .filter-item.active {
+            background-color: #0078d4;
+            color: white;
+        }
+
+        .items {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            margin-top: 20px;
+        }
+
+        .item {
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .item-title {
+            font-weight: bold;
+        }
+
+        .item-tags {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .item-tag {
+            padding: 2px 5px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            background-color: #eee;
+            border-radius: 3px;
+        }
+        .item-image {
+            max-width: 50%;
+            height: auto;
+        }
+          /* Estilos personalizados para os checkboxes monocromáticos */
+        .filter-item.btn {
+            border: 1px solid #ccc;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        .filter-item.btn:hover {
+            background-color: #e0e0e0;
+        }
+
+        .filter-item input[type="checkbox"]:checked + .btn {
+            background-color: #666;
+            border-color: #666;
+            color: #fff;
+        }
+        /* Estilize as opções de primavera, verão, outono e inverno */
+        .spring {
+            background-color: #beffb4; /* Cor de fundo da primavera */
+        }
+
+        .summer {
+            background-color: #f0ffba; /* Cor de fundo do verão */
+        }
+
+        .autumn {
+            background-color: #ffa87c; /* Cor de fundo do outono */
+        }
+
+        .winter {
+            background-color: #c8e3ff; /* Cor de fundo do inverno */
+        }
+        .legend {
+            color: rgb(255, 239, 8);
+            background-color: #62066e9f;
+        }
+        .chuvoso {
+            color: whitesmoke;
+            background-color: #016ab9;
+        }
+        .centro {
+            color: whitesmoke;
+            background-color: #b90101;
+        }
+        /* Estilo personalizado para etiquetas com imagem */
+        .filter-item.with-image {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Espaçamento entre a imagem e o texto */
+        }
+
+        /* Ajuste o estilo da imagem */
+        .filter-item.with-image img {
+            max-width: 24px; /* Largura máxima da imagem */
+            height: auto; /* Altura automática para manter a proporção */
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Stardew Guia</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid text-center pt-5">
+            <div class="p-3">
+                <h1>Stardew Guia - Aquário Comunitário</h1>
+            </div>
+        </div>
+        <div class="search-bar pb-4">
+            <input type="text" id="search-input" class="search-input" placeholder="Digite uma tag ou um nome para pesquisar...">
+            <select id="filter-select" class="filter-select form-select col">
+                <option value="">Todas as Tags</option>
+                <option value="centro comunitario">Centro Comunitário</option>
+                <option value="rios">Rios</option>
+                <option value="lagos">Lagos</option>
+                <option value="oceano">Oceano</option>
+                <option value="covos">Covos</option>
+                <option value="minas">Minas</option>
+                <option value="deserto">Deserto</option>
+                <option value="ilha gengibre">Ilha Gengibre</option>
+                <option value="bosque secreto">Bosque Secreto</option>
+                <option value="">---ESTAÇÕES---</option>
+                <option value="primavera" class="season-option spring">Primavera</option>
+                <option value="verão" class="season-option summer">Verão</option>
+                <option value="outono" class="season-option autumn">Outono</option>
+                <option value="inverno" class="season-option winter">Inverno</option>
+                <option value="">---HORÁRIO---</option>
+                <option value="qualquer horário">Qualquer Horário</option>
+                <option value="6:00 – 11:00">6:00 – 11:00</option>
+                <option value="6:00 – 14:00">6:00 – 14:00</option>
+                <option value="6:00 – 19:00">6:00 – 19:00</option>
+                <option value="6:00 – 20:00">6:00 – 20:00</option>
+                <option value="6:00 – 22:00">6:00 – 22:00</option>
+                <option value="12:00 – 2:00">12:00 – 2:00</option>
+                <option value="12:00 – 16:00">12:00 – 16:00</option>
+                <option value="16:00 – 2:00">16:00 – 2:00</option>
+                <option value="18:00 – 2:00">18:00 – 2:00</option>
+                <option value="22:00 – 2:00">22:00 – 2:00</option>
+                <option value="">---TEMPO---</option>
+                <option value="chuvoso">Chuvoso</option>
+                <option value="sol">Sol</option>
+
+            </select>
+        </div>
+        <div class="">
+            <div class="row">
+                <div class="">
+                    <div class="mx-auto col d-flex justify-content-center align-items-center">
+                        <label class="filter-item with-image">
+                            <input type="checkbox" class="tag-checkbox" value="centro comunitario"> 
+                            <img src="Imagens/aquario/centro.png" width="24" alt="">
+                            Centro Comunitário
+                        </label>
+                        <label class="filter-item with-image">
+                            <input type="checkbox" class="tag-checkbox" value="ilha gengibre">
+                            <img src="Imagens/aquario/ilha-gengibre.png" width="24" alt="">
+                             Ilha Gengibre
+                        </label>
+                        <label class="filter-item with-image">
+                            <input type="checkbox" class="tag-checkbox" value="lendário"> 
+                            <img src="Imagens/aquario/lendario.png" width="24" alt="">
+                            Lendário
+                        </label>
+                    </div>
+                    <div class="mx-auto col d-flex justify-content-center align-items-center">
+                        <label class="filter-item btn btn-outline-primary with-image">
+                            <input type="checkbox" class="tag-checkbox" value="rios"> 
+                            <img src="Imagens/aquario/rio.png" width="24" alt="">
+                            Rios
+                        </label>
+                        <label class="filter-item btn btn-outline-primary with-image">
+                            <input type="checkbox" class="tag-checkbox" value="lagos"> 
+                            <img src="Imagens/aquario/lago.png" width="24" alt="">
+                            Lagos
+                        </label>
+                        <label class="filter-item btn btn-outline-primary with-image">
+                            <input type="checkbox" class="tag-checkbox" value="oceano"> 
+                            <img src="Imagens/aquario/oceano.png" width="24" alt="">
+                            Oceano
+                        </label>
+                    </div>
+                    <div class="col d-flex justify-content-center align-items-center">
+                        <label class="filter-item btn btn-outline-primary with-image">
+                            <input type="checkbox" class="tag-checkbox" value="covos"> 
+                            <img src="Imagens/aquario/covo.png" width="24" alt="">
+                            Covos
+                        </label>
+                        <label class="filter-item btn btn-outline-primary with-image">
+                            <input type="checkbox" class="tag-checkbox" value="minas">
+                            <img src="Imagens/aquario/minas.png" width="24" alt="">
+                            Minas
+                        </label>
+                        <label class="filter-item btn btn-outline-primary with-image">
+                            <input type="checkbox" class="tag-checkbox" value="deserto"> 
+                            <img src="Imagens/aquario/deserto.png" width="24" alt="">
+                            Deserto
+                        </label>
+                    </div>
+                </div>
+                <!-- Adicione mais caixas de seleção para outras tags aqui -->
+            </div>
+        </div>
+
+        <div class="filter">
+            <div class="container">
+                <div class="col d-flex justify-content-center align-items-center">
+                    <label class="filter-item spring with-image">
+                        <input type="checkbox" class="tag-checkbox" value="primavera"> 
+                        <img src="Imagens/estacoes/primavera.png" alt="">
+                        Primavera
+                    </label>
+                    <label class="filter-item summer with-image">
+                        <input type="checkbox" class="tag-checkbox" value="verão"> 
+                        <img src="Imagens/estacoes/verao.png" alt="">
+                        Verão
+                    </label>
+                    <label class="filter-item autumn with-image">
+                        <input type="checkbox" class="tag-checkbox" value="outono"> 
+                        <img src="Imagens/estacoes/outono.png" alt="">
+                        Outono
+                    </label>
+                    <label class="filter-item winter with-image">
+                        <input type="checkbox" class="tag-checkbox" value="inverno"> 
+                        <img src="Imagens/estacoes/inverno.png" alt="">
+                        Inverno
+                    </label>
+                </div>
+                <!-- Adicione mais caixas de seleção para outras tags aqui -->
+            </div>
+        </div>
+        <div class="col d-flex justify-content-center align-items-center">
+            <label class="filter-item btn btn-outline-primary with-image">
+                <input type="checkbox" class="tag-checkbox" value="chuvoso"> 
+                <img src="Imagens/aquario/chuvoso.png" width="24" alt="">
+                Chuvoso
+            </label>
+            <label class="filter-item btn btn-outline-primary with-image">
+                <input type="checkbox" class="tag-checkbox" value="sol"> 
+                <img src="Imagens/aquario/sol.png" width="24" alt="">
+                Sol
+            </label>
+        </div>
+            
+        <div id="items" class="items"></div>
+    </div>
+    
+
+    <script>
+        var data = [
+        {
+        title: "Acará-Disco Azul",
+        tags: ["ilha gengibre", "primavera","verão", "outono","inverno", "qualquer horário", ],
+        image: "./Imagens/aquario/acara-disco-azul.png" 
+    },       
+    {
+        title: "Achigã",
+        tags: ["lagos", "primavera","verão", "outono","inverno", "6:00 – 19:00", "centro comunitario"],
+        image: "./Imagens/aquario/Achiga.png" 
+    },
+    {
+        title: "Achigã-pequeno",
+        tags: ["rios", "primavera", "outono","qualquer horário",],
+        image: "./Imagens/aquario/achiga-pequeno.png" 
+    },
+    {
+        title: "Albacora",
+        tags: ["oceano", "outono","inverno","6:00 - 11:00","18:00 - 2:00"],
+        image: "./Imagens/aquario/albacora.png" 
+    },
+    {
+        title: "Alocine",
+        tags: ["rios", "primavera", "verão", "outono","chuvoso", "qualquer horário", "centro comunitario"],
+        image: "./Imagens/aquario/alocine.png"
+    },
+    {
+        title: "Anchova",
+        tags: ["oceano", "primavera", "outono", "qualquer horário"],
+        image: "./Imagens/aquario/Anchova.png"
+    },
+    {
+        title: "Areinha",
+        tags: ["deserto", "primavera","verão", "outono","inverno", "6:00 – 22:00", "centro comunitario"],
+        image: "./Imagens/aquario/areinha.png"
+    },
+    {
+        title: "Arenque",
+        tags: ["oceano", "primavera", "inverno", "qualquer horário"],
+        image: "./Imagens/aquario/Arenque.png"
+    },
+    {
+        title: "Arraia",
+        tags: ["ilha gengibre","Caverna do Pirata", "primavera","verão", "outono","inverno", "qualquer horário"],
+        image: "./Imagens/aquario/Arraia.png"
+    },
+    {
+        title: "Atum",
+        tags: ["oceano", "verão","inverno", "6:00 – 19:00", "centro comunitario"],
+        image: "./Imagens/aquario/atum.png"
+    },
+    {
+        title: " Bagre",
+        tags: ["rios", "primavera", "outono", "chuvoso", "qualquer horário", "centro comunitario"],
+        image: "./Imagens/aquario/bagre.png"
+    },
+    {
+        title: "Baiacu",
+        tags: ["oceano", "verão", "12:00 – 16:00","sol", "centro comunitario"],
+        image: "./Imagens/aquario/baiacu.png"
+    },
+    {
+        title: "Berbigão",
+        tags: ["covos", "oceano", "centro comunitario"],
+        image: "./Imagens/aquario/berbigao.png"
+    },
+    {
+        title: "Brema",
+        tags: ["rios", "primavera","verão", "outono","inverno", "18:00 – 2:00", "centro comunitario"],
+        image: "./Imagens/aquario/brema.png"
+    },
+    {
+        title: "Camarão",
+        tags: ["covos", "centro comunitario"],
+        image: "./Imagens/aquario/camarao.png"
+    },
+    {
+        title: "Caramujo",
+        tags: ["covos", "centro comunitario"],
+        image: "./Imagens/aquario/caramujo.png"
+    },
+    {
+        title: "Caranguejo",
+        tags: ["covos", "minas", "centro comunitario"],
+        image: "./Imagens/aquario/caranguejo.png"
+    },
+    {
+        title: "Carpa",
+        tags: ["lagos", "primavera","verão", "outono", "qualquer horário", "centro comunitario"],
+        image: "./Imagens/aquario/carpa.png"
+    },
+    {
+        title: "Carpa da Meia Noite",
+        tags: ["lagos", "outono","inverno", "22:00 - 2:00"],
+        image: "./Imagens/aquario/Carpa da Meia Noite.png"
+    },
+    {
+        title: "Carpa escorpiônica",
+        tags: ["deserto", "primavera","verão","outono","inverno", "6:00 - 20:00"],
+        image: "./Imagens/aquario/Carpa escorpiônica.png"
+    },
+    {
+        title: "Chione",
+        tags: ["minas","60° andar", "primavera","verão", "outono","inverno", "qualquer horário",],
+        image: "./Imagens/aquario/Chione.png"
+    },
+    {
+        title: "Cioba",
+        tags: ["oceano", "verão","outono","chuvoso", "6:00 – 19:00", "centro comunitario"],
+        image: "./Imagens/aquario/cioba.png"
+    },
+    {
+        title: "Dourado",
+        tags: ["rios","floresta", "verão", "6:00 – 19:00"],
+        image: "./Imagens/aquario/Dourado.png"
+    },
+    {
+        title: "Concha",
+        tags: ["covos", "oceano", "centro comunitario"],
+        image: "./Imagens/aquario/concha.png"
+    },
+    {
+        title: "Enguia",
+        tags: ["oceano", "primavera","outono","chuvoso", "16:00 – 2:00", "centro comunitario"],
+        image: "./Imagens/aquario/enguia.png"
+    },
+    {
+        title: "Enguia de lava",
+        tags: ["minas","100° andar", "primavera", "verão","outono","inverno"],
+        image: "./Imagens/aquario/Enguia de lava.png"
+    },
+    {
+        title: "Esquálio",
+        tags: ["lagos", "verão","inverno","centro comunitario"],
+        image: "./Imagens/aquario/Esquálio.png"
+    },
+    {
+        title: "Esturjão",
+        tags: ["lagos", "verão","inverno", "6:00 – 19:00", "centro comunitario"],
+        image: "./Imagens/aquario/esturjao.png"
+    },
+    {
+        title: "Halibute",
+        tags: ["oceano","primavera", "verão","inverno", "6:00 - 11:00","19:00 - 2:00",],
+        image: "./Imagens/aquario/Halibute.png"
+    },
+    {
+        title: "Linguado",
+        tags: ["oceano","ilha gengibre","primavera", "verão", "6:00 - 20:00"],
+        image: "./Imagens/aquario/Linguado.png"
+    },
+    {
+        title: "Lagosta",
+        tags: ["covos", "centro comunitario"],
+        image: "./Imagens/aquario/lagosta.png"
+    },
+    {
+        title: "Lagostim",
+        tags: ["covos","oceano", "centro comunitario"],
+        image: "./Imagens/aquario/lagostim.png"
+    },
+    {
+        title: "Lesma",
+        tags: ["covos", "centro comunitario"],
+        image: "./Imagens/aquario/lesma.png"
+    },
+    {
+        title: "Lúcio",
+        tags: ["rios","verão","inverno","qualquer horário"],
+        image: "./Imagens/aquario/Lúcio.png"
+    },
+    {
+        title: "Lula",
+        tags: ["oceano","inverno", "18:00 - 2:00"],
+        image: "./Imagens/aquario/Lula.png"
+    },
+    {
+        title: "Madeirão",
+        tags: ["bosque secreto", "primavera","verão", "outono","inverno","chuvoso", "qualquer horário", "centro comunitario"],
+        image: "./Imagens/aquario/madeirao.png"
+    },
+    {
+        title: "Mexilhão",
+        tags: ["covos", "oceano", "centro comunitario"],
+        image: "./Imagens/aquario/mexilhao.png"
+    },
+    {
+        title: "Ostra",
+        tags: ["covos", "oceano", "centro comunitario"],
+        image: "./Imagens/aquario/ostra.png"
+    },
+    {
+        title: "Ófis",
+        tags: ["lagos","inverno" , "qualquer horário"],
+        image: "./Imagens/aquario/Ófis.png"
+    },
+    {
+        title: "Peixe-fantasma",
+        tags: ["minas","20º, 60º andar", "primavera","verão", "outono","inverno", "qualquer horário", "centro comunitario"],
+        image: "./Imagens/aquario/peixe-fantasma.png"
+    },
+    {
+        title: "Peixe-gato",
+        tags: ["lagos", "primavera","verão", "outono","inverno", "qualquer horário", "centro comunitario"],
+        image: "./Imagens/aquario/peixe-gato.png"
+    },
+    {
+        title: "Peixe-Leão",
+        tags: ["ilha gengibre", "primavera","verão", "outono","inverno", "qualquer horário"],
+        image: "./Imagens/aquario/Peixe-Leão.png"
+    },
+    {
+        title: "Peixe-pedra",
+        tags: ["minas", "20º andar","primavera","verão", "outono","inverno", "qualquer horário"],
+        image: "./Imagens/aquario/Peixe-pedra.png"
+    },
+    {
+        title: "Peixe-sol",
+        tags: ["rios", "primavera", "verão", "6:00 – 19:00","sol", "centro comunitario"],
+        image: "./Imagens/aquario/peixe-sol.png"
+    },
+    {
+        title: "Pepino-do-mar",
+        tags: ["oceano", "outono","inverno", "6:00 – 19:00"],
+        image: "./Imagens/aquario/Pepino-do-mar.png"
+    },
+    {
+        title: "Perca",
+        tags: ["rios", "lagos","inverno", "qualquer horário"],
+        image: "./Imagens/aquario/Perca.png"
+    },
+    {
+        title: "Picão-verde",
+        tags: ["rios", "outono","chuvoso", "12:00 – 2:00", "centro comunitario"],
+        image: "./Imagens/aquario/picao-verde.png"
+    },
+    {
+        title: "Polvo",
+        tags: ["oceano", "lagos","verão", "6:00 - 13:00"],
+        image: "./Imagens/aquario/Polvo.png"
+    },
+    {
+        title: "Salmão",
+        tags: ["rios", "outono", "6:00 - 19:00"],
+        image: "./Imagens/aquario/Salmão.png"
+    },
+    {
+        title: "Salmão híbrido",
+        tags: ["rios", "primavera", "inverno", "6:00 – 19:00", "centro comunitario"],
+        image: "./Imagens/aquario/salmao-hibrido.png"
+    },
+    {
+        title: "Salmão mutante",
+        tags: ["Covil dos Insetos Mutantes", "primavera","verão", "outono","inverno", "qualquer horário"],
+        image: "./Imagens/aquario/Salmão mutante.png"
+    },
+    {
+        title: "Salmão nulo",
+        tags: ["Pântano da bruxa", "primavera","verão", "outono","inverno", "qualquer horário", "centro comunitario"],
+        image: "./Imagens/aquario/Salmão nulo.png"
+    },
+    {
+        title: "Salmonete",
+        tags: ["oceano", "verão","inverno", "6:00 - 19:00"],
+        image: "./Imagens/aquario/Salmonete.png"
+    },
+    {
+        title: "Sardinha",
+        tags: ["oceano", "primavera", "outono","inverno", "6:00 – 19:00", "centro comunitario"],
+        image: "./Imagens/aquario/sardinha.png"
+    },
+    {
+        title: "Superpepino",
+        tags: ["oceano","ilha gengibre", "verão","outono", "18:00 - 2:00"],
+        image: "./Imagens/aquario/Superpepino.png"
+    },
+    {
+        title: "Tilápia",
+        tags: ["oceano", "verão","inverno", "6:00 – 14:00", "centro comunitario"],
+        image: "./Imagens/aquario/tilapia.png"
+    },
+    {
+        title: "Truta arco-íris",
+        tags: ["rios","lagos", "verão","sol", "6:00 - 19:00"],
+        image: "./Imagens/aquario/Truta arco-íris.png"
+    },
+    //mercado
+    {
+        title: "Lula da Meia-noite",
+        tags: ["mercado noturno"],
+        image: "./Imagens/aquario/Lula da Meia-noite.png"
+    },
+    {
+        title: "Peixe Assustador",
+        tags: ["mercado noturno"],
+        image: "./Imagens/aquario/Peixe Assustador.png"
+    },
+    {
+        title: "Peixe-bolha",
+        tags: ["mercado noturno"],
+        image: "./Imagens/aquario/Peixe-bolha.png"
+    },
+    //lendários
+    {
+        title: "Peixe-carmim",
+        tags: ["oceano","pier", "verão", "qualquer horário", "lendário"],
+        image: "./Imagens/aquario/Peixe-carmim.png"
+    },
+    {
+        title: "Tamboril",
+        tags: ["rios","ponte", "outono", "qualquer horário", "lendário"],
+        image: "./Imagens/aquario/Tamboril.png"
+    },
+    {
+        title: "Lenda",
+        tags: ["oceano", "primavera","chuvoso", "qualquer horário", "lendário"],
+        image: "./Imagens/aquario/Lenda.png"
+    },
+    {
+        title: "Peixe-gelo",
+        tags: ["Floresta Cinzaseiva.","inverno", "qualquer horário", "lendário"],
+        image: "./Imagens/aquario/Peixe-gelo.png"
+    },
+    {
+        title: "Carpa mutante",
+        tags: ["Esgotos", "primavera","verão", "outono","inverno","qualquer horário", "lendário"],
+        image: "./Imagens/aquario/Carpa mutante.png"
+    },
+    //lendarios II
+    {
+        title: "Filho do Peixe-Carmim",
+        tags: ["oceano","pier", "primavera","verão", "outono","inverno", "qualquer horário", "lendário"],
+        image: "./Imagens/aquario/Filho do Peixe-Carmim.png"
+    },
+    {
+        title: "Srta. Tamboril",
+        tags: ["rios","ponte","primavera","verão", "outono","inverno", "qualquer horário", "lendário"],
+        image: "./Imagens/aquario/Srta. Tamboril.png"
+    },
+    {
+        title: "Lenda II",
+        tags: ["oceano", "primavera","verão", "outono","inverno", "qualquer horário", "lendário"],
+        image: "./Imagens/aquario/Lenda II.png"
+    },
+    {
+        title: "Peixe-Gelo Jr.",
+        tags: ["Floresta Cinzaseiva.","primavera","verão", "outono","inverno",, "qualquer horário", "lendário"],
+        image: "./Imagens/aquario/Peixe-Gelo Jr..png"
+    },
+    {
+        title: "Carpa Radioativa",
+        tags: ["Esgotos", "primavera","verão", "outono","inverno","qualquer horário", "lendário"],
+        image: "./Imagens/aquario/Carpa Radioativa.png"
+    },
+
+        ];
+
+        function createElement(tag, attributes, content) {
+            var element = document.createElement(tag);
+            for (var key in attributes) {
+                element.setAttribute(key, attributes[key]);
+            }
+            if (content) {
+                element.innerHTML = content;
+            }
+            return element;
+        }
+
+        function createItem(item) {
+        var itemDiv = createElement("div", { class: "item" });
+        
+        var itemContent = createElement("div", { class: "d-flex align-items-center" });
+
+        // Adicione a exibição da imagem (sprite)
+        var itemImage = createElement("img", { src: item.image, alt: item.title, class: "item-image mr-3" });
+        
+        var itemTitle = createElement("div", { class: "item-title" }, item.title);
+
+        itemContent.appendChild(itemImage);
+        itemContent.appendChild(itemTitle);
+
+         var itemTags = createElement("div", { class: "item-tags" });
+
+    for (var tag of item.tags) {
+        // Adicione a classe correspondente da estação à tag
+        var tagClass = "";
+        if (tag === "primavera") {
+            tagClass = "spring";
+        } else if (tag === "verão") {
+            tagClass = "summer";
+        } else if (tag === "outono") {
+            tagClass = "autumn";
+        } else if (tag === "inverno") {
+            tagClass = "winter";
+        }else if (tag === "lendário") {
+            tagClass = "legend";
+        }
+        else if (tag === "chuvoso") {
+            tagClass = "chuvoso";
+        }
+        else if (tag === "centro comunitario") {
+            tagClass = "centro";
+        }
+        
+        
+
+        var itemTag = createElement("div", { class: "item-tag " + tagClass }, tag);
+        itemTags.appendChild(itemTag);
+    }
+
+    itemDiv.appendChild(itemContent);
+    itemDiv.appendChild(itemTags);
+
+    return itemDiv;
+}
+
+        function filterData(query, selectedTag) {
+            query = query.toLowerCase();
+            selectedTag = selectedTag.toLowerCase();
+
+            return data.filter(function (item) {
+                var titleMatch = item.title.toLowerCase().includes(query);
+                var tagMatch = selectedTag === "" || item.tags.some(tag => tag.toLowerCase().includes(selectedTag));
+                return titleMatch && tagMatch;
+            });
+        }
+
+        function renderItems(data) {
+            var itemsDiv = document.getElementById("items");
+            itemsDiv.innerHTML = "";
+
+            data.forEach(function (item) {
+                var itemElement = createItem(item);
+                itemsDiv.appendChild(itemElement);
+            });
+        }
+
+        function updateResults() {
+            var searchInput = document.getElementById("search-input");
+            var filterSelect = document.getElementById("filter-select");
+            var query = searchInput.value.trim();
+            var selectedTag = filterSelect.value;
+
+            var filteredData = filterData(query, selectedTag);
+            renderItems(filteredData);
+        }
+        // Função para atualizar os resultados com base nas tags selecionadas
+    function updateResultsWithTags() {
+        var selectedTags = Array.from(document.querySelectorAll('.tag-checkbox:checked')).map(function (checkbox) {
+            return checkbox.value;
+        });
+        var searchInput = document.getElementById("search-input").value.trim().toLowerCase();
+
+        var filteredData = data.filter(function (item) {
+            var titleMatch = item.title.toLowerCase().includes(searchInput);
+            var tagsMatch = selectedTags.length === 0 || selectedTags.every(function (tag) {
+                return item.tags.includes(tag);
+            });
+
+            return titleMatch && tagsMatch;
+        });
+
+        renderItems(filteredData);
+    }
+
+    // Adicione um ouvinte de eventos às caixas de seleção de tags
+    var tagCheckboxes = document.querySelectorAll('.tag-checkbox');
+    tagCheckboxes.forEach(function (checkbox) {
+        checkbox.addEventListener('change', updateResultsWithTags);
+    });
+
+        var searchInput = document.getElementById("search-input");
+        var filterSelect = document.getElementById("filter-select");
+
+        searchInput.addEventListener("input", updateResults);
+        filterSelect.addEventListener("change", updateResults);
+
+        // Inicializar o site com os dados originais
+        renderItems(data);
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
