@@ -5,6 +5,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Imagens/Stardrop.png" type="image/x-icon">
+
      <title>Stardew Guia</title>
 
     <style>
@@ -38,7 +40,7 @@
         .search-input {
             width: 70%;
             padding: 10px;
-            border: 1px solid #ccc;
+            border: 1px Solid #ccc;
             outline: none;
         }
 
@@ -80,7 +82,7 @@
 
         .item {
             padding: 20px;
-            border: 1px solid #ccc;
+            border: 1px Solid #ccc;
         }
 
         .item-title {
@@ -106,7 +108,7 @@
         }
           /* Estilos personalizados para os checkboxes monocromáticos */
         .filter-item.btn {
-            border: 1px solid #ccc;
+            border: 1px Solid #ccc;
             background-color: #f8f8f8;
             color: #333;
         }
@@ -120,27 +122,27 @@
             border-color: #666;
             color: #fff;
         }
-        /* Estilize as opções de primavera, verão, outono e inverno */
+        /* Estilize as opções de Primavera, Verão, Outono e Inverno */
         .spring {
-            background-color: #beffb4; /* Cor de fundo da primavera */
+            background-color: #beffb4; /* Cor de fundo da Primavera */
         }
 
         .summer {
-            background-color: #f0ffba; /* Cor de fundo do verão */
+            background-color: #f0ffba; /* Cor de fundo do Verão */
         }
 
         .autumn {
-            background-color: #ffa87c; /* Cor de fundo do outono */
+            background-color: #ffa87c; /* Cor de fundo do Outono */
         }
 
         .winter {
-            background-color: #c8e3ff; /* Cor de fundo do inverno */
+            background-color: #c8e3ff; /* Cor de fundo do Inverno */
         }
         .legend {
             color: rgb(255, 239, 8);
             background-color: #62066e9f;
         }
-        .chuvoso {
+        .Chuvoso {
             color: whitesmoke;
             background-color: #016ab9;
         }
@@ -198,22 +200,22 @@
             <input type="text" id="search-input" class="search-input" placeholder="Digite uma tag ou um nome para pesquisar...">
             <select id="filter-select" class="filter-select form-select col">
                 <option value="">Todas as Tags</option>
-                <option value="centro comunitario">Centro Comunitário</option>
-                <option value="rios">Rios</option>
-                <option value="lagos">Lagos</option>
-                <option value="oceano">Oceano</option>
-                <option value="covos">Covos</option>
-                <option value="minas">Minas</option>
-                <option value="deserto">Deserto</option>
-                <option value="ilha gengibre">Ilha Gengibre</option>
-                <option value="bosque secreto">Bosque Secreto</option>
+                <option value="Centro Comunitário">Centro Comunitário</option>
+                <option value="Rios">Rios</option>
+                <option value="Lagos">Lagos</option>
+                <option value="Oceano">Oceano</option>
+                <option value="Covos">Covos</option>
+                <option value="Minas">Minas</option>
+                <option value="Deserto">Deserto</option>
+                <option value="Ilha Gengibre">Ilha Gengibre</option>
+                <option value="Bosque Secreto">Bosque Secreto</option>
                 <option value="">---ESTAÇÕES---</option>
-                <option value="primavera" class="season-option spring">Primavera</option>
-                <option value="verão" class="season-option summer">Verão</option>
-                <option value="outono" class="season-option autumn">Outono</option>
-                <option value="inverno" class="season-option winter">Inverno</option>
+                <option value="Primavera" class="season-option spring">Primavera</option>
+                <option value="Verão" class="season-option summer">Verão</option>
+                <option value="Outono" class="season-option autumn">Outono</option>
+                <option value="Inverno" class="season-option winter">Inverno</option>
                 <option value="">---HORÁRIO---</option>
-                <option value="qualquer horário">Qualquer Horário</option>
+                <option value="Qualquer Horário">Qualquer Horário</option>
                 <option value="6:00 – 11:00">6:00 – 11:00</option>
                 <option value="6:00 – 14:00">6:00 – 14:00</option>
                 <option value="6:00 – 19:00">6:00 – 19:00</option>
@@ -225,8 +227,8 @@
                 <option value="18:00 – 2:00">18:00 – 2:00</option>
                 <option value="22:00 – 2:00">22:00 – 2:00</option>
                 <option value="">---TEMPO---</option>
-                <option value="chuvoso">Chuvoso</option>
-                <option value="sol">Sol</option>
+                <option value="Chuvoso">Chuvoso</option>
+                <option value="Sol">Sol</option>
 
             </select>
         </div>
@@ -235,12 +237,12 @@
                 <div class="">
                     <div class="mx-auto col d-flex justify-content-center align-items-center">
                         <label class="filter-item with-image">
-                            <input type="checkbox" class="tag-checkbox" value="centro comunitario"> 
+                            <input type="checkbox" class="tag-checkbox" value="Centro Comunitário"> 
                             <img src="Imagens/aquario/centro.png" width="24" alt="">
                             Centro Comunitário
                         </label>
                         <label class="filter-item with-image">
-                            <input type="checkbox" class="tag-checkbox" value="ilha gengibre">
+                            <input type="checkbox" class="tag-checkbox" value="Ilha Gengibre">
                             <img src="Imagens/aquario/ilha-gengibre.png" width="24" alt="">
                              Ilha Gengibre
                         </label>
@@ -252,35 +254,35 @@
                     </div>
                     <div class="mx-auto col d-flex justify-content-center align-items-center">
                         <label class="filter-item btn btn-outline-primary with-image">
-                            <input type="checkbox" class="tag-checkbox" value="rios"> 
+                            <input type="checkbox" class="tag-checkbox" value="Rios"> 
                             <img src="Imagens/aquario/rio.png" width="24" alt="">
                             Rios
                         </label>
                         <label class="filter-item btn btn-outline-primary with-image">
-                            <input type="checkbox" class="tag-checkbox" value="lagos"> 
+                            <input type="checkbox" class="tag-checkbox" value="Lagos"> 
                             <img src="Imagens/aquario/lago.png" width="24" alt="">
                             Lagos
                         </label>
                         <label class="filter-item btn btn-outline-primary with-image">
-                            <input type="checkbox" class="tag-checkbox" value="oceano"> 
-                            <img src="Imagens/aquario/oceano.png" width="24" alt="">
+                            <input type="checkbox" class="tag-checkbox" value="Oceano"> 
+                            <img src="Imagens/aquario/Oceano.png" width="24" alt="">
                             Oceano
                         </label>
                     </div>
                     <div class="col d-flex justify-content-center align-items-center">
                         <label class="filter-item btn btn-outline-primary with-image">
-                            <input type="checkbox" class="tag-checkbox" value="covos"> 
+                            <input type="checkbox" class="tag-checkbox" value="Covos"> 
                             <img src="Imagens/aquario/covo.png" width="24" alt="">
                             Covos
                         </label>
                         <label class="filter-item btn btn-outline-primary with-image">
-                            <input type="checkbox" class="tag-checkbox" value="minas">
-                            <img src="Imagens/aquario/minas.png" width="24" alt="">
+                            <input type="checkbox" class="tag-checkbox" value="Minas">
+                            <img src="Imagens/aquario/Minas.png" width="24" alt="">
                             Minas
                         </label>
                         <label class="filter-item btn btn-outline-primary with-image">
-                            <input type="checkbox" class="tag-checkbox" value="deserto"> 
-                            <img src="Imagens/aquario/deserto.png" width="24" alt="">
+                            <input type="checkbox" class="tag-checkbox" value="Deserto"> 
+                            <img src="Imagens/aquario/Deserto.png" width="24" alt="">
                             Deserto
                         </label>
                     </div>
@@ -293,23 +295,23 @@
             <div class="container">
                 <div class="col d-flex justify-content-center align-items-center">
                     <label class="filter-item spring with-image">
-                        <input type="checkbox" class="tag-checkbox" value="primavera"> 
-                        <img src="Imagens/estacoes/primavera.png" alt="">
+                        <input type="checkbox" class="tag-checkbox" value="Primavera"> 
+                        <img src="Imagens/estacoes/Primavera.png" alt="">
                         Primavera
                     </label>
                     <label class="filter-item summer with-image">
-                        <input type="checkbox" class="tag-checkbox" value="verão"> 
+                        <input type="checkbox" class="tag-checkbox" value="Verão"> 
                         <img src="Imagens/estacoes/verao.png" alt="">
                         Verão
                     </label>
                     <label class="filter-item autumn with-image">
-                        <input type="checkbox" class="tag-checkbox" value="outono"> 
-                        <img src="Imagens/estacoes/outono.png" alt="">
+                        <input type="checkbox" class="tag-checkbox" value="Outono"> 
+                        <img src="Imagens/estacoes/Outono.png" alt="">
                         Outono
                     </label>
                     <label class="filter-item winter with-image">
-                        <input type="checkbox" class="tag-checkbox" value="inverno"> 
-                        <img src="Imagens/estacoes/inverno.png" alt="">
+                        <input type="checkbox" class="tag-checkbox" value="Inverno"> 
+                        <img src="Imagens/estacoes/Inverno.png" alt="">
                         Inverno
                     </label>
                 </div>
@@ -318,13 +320,13 @@
         </div>
         <div class="col d-flex justify-content-center align-items-center">
             <label class="filter-item btn btn-outline-primary with-image">
-                <input type="checkbox" class="tag-checkbox" value="chuvoso"> 
-                <img src="Imagens/aquario/chuvoso.png" width="24" alt="">
+                <input type="checkbox" class="tag-checkbox" value="Chuvoso"> 
+                <img src="Imagens/aquario/Chuvoso.png" width="24" alt="">
                 Chuvoso
             </label>
             <label class="filter-item btn btn-outline-primary with-image">
-                <input type="checkbox" class="tag-checkbox" value="sol"> 
-                <img src="Imagens/aquario/sol.png" width="24" alt="">
+                <input type="checkbox" class="tag-checkbox" value="Sol"> 
+                <img src="Imagens/aquario/Sol.png" width="24" alt="">
                 Sol
             </label>
         </div>
@@ -337,287 +339,287 @@
         var data = [
         {
         title: "Acará-Disco Azul",
-        tags: ["ilha gengibre", "primavera","verão", "outono","inverno", "qualquer horário", ],
+        tags: ["Ilha Gengibre", "Primavera","Verão", "Outono","Inverno", "Qualquer Horário", ],
         image: "./Imagens/aquario/acara-disco-azul.png" 
     },       
     {
         title: "Achigã",
-        tags: ["lagos", "primavera","verão", "outono","inverno", "6:00 – 19:00", "centro comunitario"],
+        tags: ["Lagos", "Primavera","Verão", "Outono","Inverno", "6:00 – 19:00", "Centro Comunitário"],
         image: "./Imagens/aquario/Achiga.png" 
     },
     {
         title: "Achigã-pequeno",
-        tags: ["rios", "primavera", "outono","qualquer horário",],
+        tags: ["Rios", "Primavera", "Outono","Qualquer Horário",],
         image: "./Imagens/aquario/achiga-pequeno.png" 
     },
     {
         title: "Albacora",
-        tags: ["oceano", "outono","inverno","6:00 - 11:00","18:00 - 2:00"],
+        tags: ["Oceano", "Outono","Inverno","6:00 - 11:00","18:00 - 2:00"],
         image: "./Imagens/aquario/albacora.png" 
     },
     {
         title: "Alocine",
-        tags: ["rios", "primavera", "verão", "outono","chuvoso", "qualquer horário", "centro comunitario"],
+        tags: ["Rios", "Primavera", "Verão", "Outono","Chuvoso", "Qualquer Horário", "Centro Comunitário"],
         image: "./Imagens/aquario/alocine.png"
     },
     {
         title: "Anchova",
-        tags: ["oceano", "primavera", "outono", "qualquer horário"],
+        tags: ["Oceano", "Primavera", "Outono", "Qualquer Horário"],
         image: "./Imagens/aquario/Anchova.png"
     },
     {
         title: "Areinha",
-        tags: ["deserto", "primavera","verão", "outono","inverno", "6:00 – 22:00", "centro comunitario"],
+        tags: ["Deserto", "Primavera","Verão", "Outono","Inverno", "6:00 – 22:00", "Centro Comunitário"],
         image: "./Imagens/aquario/areinha.png"
     },
     {
         title: "Arenque",
-        tags: ["oceano", "primavera", "inverno", "qualquer horário"],
+        tags: ["Oceano", "Primavera", "Inverno", "Qualquer Horário"],
         image: "./Imagens/aquario/Arenque.png"
     },
     {
         title: "Arraia",
-        tags: ["ilha gengibre","Caverna do Pirata", "primavera","verão", "outono","inverno", "qualquer horário"],
+        tags: ["Ilha Gengibre","Caverna do Pirata", "Primavera","Verão", "Outono","Inverno", "Qualquer Horário"],
         image: "./Imagens/aquario/Arraia.png"
     },
     {
         title: "Atum",
-        tags: ["oceano", "verão","inverno", "6:00 – 19:00", "centro comunitario"],
+        tags: ["Oceano", "Verão","Inverno", "6:00 – 19:00", "Centro Comunitário"],
         image: "./Imagens/aquario/atum.png"
     },
     {
         title: " Bagre",
-        tags: ["rios", "primavera", "outono", "chuvoso", "qualquer horário", "centro comunitario"],
+        tags: ["Rios", "Primavera", "Outono", "Chuvoso", "Qualquer Horário", "Centro Comunitário"],
         image: "./Imagens/aquario/bagre.png"
     },
     {
         title: "Baiacu",
-        tags: ["oceano", "verão", "12:00 – 16:00","sol", "centro comunitario"],
+        tags: ["Oceano", "Verão", "12:00 – 16:00","Sol", "Centro Comunitário"],
         image: "./Imagens/aquario/baiacu.png"
     },
     {
         title: "Berbigão",
-        tags: ["covos", "oceano", "centro comunitario"],
+        tags: ["Covos", "Oceano", "Centro Comunitário"],
         image: "./Imagens/aquario/berbigao.png"
     },
     {
         title: "Brema",
-        tags: ["rios", "primavera","verão", "outono","inverno", "18:00 – 2:00", "centro comunitario"],
+        tags: ["Rios", "Primavera","Verão", "Outono","Inverno", "18:00 – 2:00", "Centro Comunitário"],
         image: "./Imagens/aquario/brema.png"
     },
     {
         title: "Camarão",
-        tags: ["covos", "centro comunitario"],
+        tags: ["Covos", "Centro Comunitário"],
         image: "./Imagens/aquario/camarao.png"
     },
     {
         title: "Caramujo",
-        tags: ["covos", "centro comunitario"],
+        tags: ["Covos", "Centro Comunitário"],
         image: "./Imagens/aquario/caramujo.png"
     },
     {
         title: "Caranguejo",
-        tags: ["covos", "minas", "centro comunitario"],
+        tags: ["Covos", "Minas", "Centro Comunitário"],
         image: "./Imagens/aquario/caranguejo.png"
     },
     {
         title: "Carpa",
-        tags: ["lagos", "primavera","verão", "outono", "qualquer horário", "centro comunitario"],
+        tags: ["Lagos", "Primavera","Verão", "Outono", "Qualquer Horário", "Centro Comunitário"],
         image: "./Imagens/aquario/carpa.png"
     },
     {
         title: "Carpa da Meia Noite",
-        tags: ["lagos", "outono","inverno", "22:00 - 2:00"],
+        tags: ["Lagos", "Outono","Inverno", "22:00 - 2:00"],
         image: "./Imagens/aquario/Carpa da Meia Noite.png"
     },
     {
         title: "Carpa escorpiônica",
-        tags: ["deserto", "primavera","verão","outono","inverno", "6:00 - 20:00"],
+        tags: ["Deserto", "Primavera","Verão","Outono","Inverno", "6:00 - 20:00"],
         image: "./Imagens/aquario/Carpa escorpiônica.png"
     },
     {
         title: "Chione",
-        tags: ["minas","60° andar", "primavera","verão", "outono","inverno", "qualquer horário",],
+        tags: ["Minas","60° andar", "Primavera","Verão", "Outono","Inverno", "Qualquer Horário",],
         image: "./Imagens/aquario/Chione.png"
     },
     {
         title: "Cioba",
-        tags: ["oceano", "verão","outono","chuvoso", "6:00 – 19:00", "centro comunitario"],
+        tags: ["Oceano", "Verão","Outono","Chuvoso", "6:00 – 19:00", "Centro Comunitário"],
         image: "./Imagens/aquario/cioba.png"
     },
     {
         title: "Dourado",
-        tags: ["rios","floresta", "verão", "6:00 – 19:00"],
+        tags: ["Rios","floresta", "Verão", "6:00 – 19:00"],
         image: "./Imagens/aquario/Dourado.png"
     },
     {
         title: "Concha",
-        tags: ["covos", "oceano", "centro comunitario"],
+        tags: ["Covos", "Oceano", "Centro Comunitário"],
         image: "./Imagens/aquario/concha.png"
     },
     {
         title: "Enguia",
-        tags: ["oceano", "primavera","outono","chuvoso", "16:00 – 2:00", "centro comunitario"],
+        tags: ["Oceano", "Primavera","Outono","Chuvoso", "16:00 – 2:00", "Centro Comunitário"],
         image: "./Imagens/aquario/enguia.png"
     },
     {
         title: "Enguia de lava",
-        tags: ["minas","100° andar", "primavera", "verão","outono","inverno"],
+        tags: ["Minas","100° andar", "Primavera", "Verão","Outono","Inverno"],
         image: "./Imagens/aquario/Enguia de lava.png"
     },
     {
         title: "Esquálio",
-        tags: ["lagos", "verão","inverno","centro comunitario"],
+        tags: ["Lagos", "Verão","Inverno","Centro Comunitário"],
         image: "./Imagens/aquario/Esquálio.png"
     },
     {
         title: "Esturjão",
-        tags: ["lagos", "verão","inverno", "6:00 – 19:00", "centro comunitario"],
+        tags: ["Lagos", "Verão","Inverno", "6:00 – 19:00", "Centro Comunitário"],
         image: "./Imagens/aquario/esturjao.png"
     },
     {
         title: "Halibute",
-        tags: ["oceano","primavera", "verão","inverno", "6:00 - 11:00","19:00 - 2:00",],
+        tags: ["Oceano","Primavera", "Verão","Inverno", "6:00 - 11:00","19:00 - 2:00",],
         image: "./Imagens/aquario/Halibute.png"
     },
     {
         title: "Linguado",
-        tags: ["oceano","ilha gengibre","primavera", "verão", "6:00 - 20:00"],
+        tags: ["Oceano","Ilha Gengibre","Primavera", "Verão", "6:00 - 20:00"],
         image: "./Imagens/aquario/Linguado.png"
     },
     {
         title: "Lagosta",
-        tags: ["covos", "centro comunitario"],
-        image: "./Imagens/aquario/lagosta.png"
+        tags: ["Covos", "Centro Comunitário"],
+        image: "./Imagens/aquario/Lagosta.png"
     },
     {
         title: "Lagostim",
-        tags: ["covos","oceano", "centro comunitario"],
-        image: "./Imagens/aquario/lagostim.png"
+        tags: ["Covos","Oceano", "Centro Comunitário"],
+        image: "./Imagens/aquario/Lagostim.png"
     },
     {
         title: "Lesma",
-        tags: ["covos", "centro comunitario"],
+        tags: ["Covos", "Centro Comunitário"],
         image: "./Imagens/aquario/lesma.png"
     },
     {
         title: "Lúcio",
-        tags: ["rios","verão","inverno","qualquer horário"],
+        tags: ["Rios","Verão","Inverno","Qualquer Horário"],
         image: "./Imagens/aquario/Lúcio.png"
     },
     {
         title: "Lula",
-        tags: ["oceano","inverno", "18:00 - 2:00"],
+        tags: ["Oceano","Inverno", "18:00 - 2:00"],
         image: "./Imagens/aquario/Lula.png"
     },
     {
         title: "Madeirão",
-        tags: ["bosque secreto", "primavera","verão", "outono","inverno","chuvoso", "qualquer horário", "centro comunitario"],
+        tags: ["Bosque Secreto", "Primavera","Verão", "Outono","Inverno","Chuvoso", "Qualquer Horário", "Centro Comunitário"],
         image: "./Imagens/aquario/madeirao.png"
     },
     {
         title: "Mexilhão",
-        tags: ["covos", "oceano", "centro comunitario"],
+        tags: ["Covos", "Oceano", "Centro Comunitário"],
         image: "./Imagens/aquario/mexilhao.png"
     },
     {
         title: "Ostra",
-        tags: ["covos", "oceano", "centro comunitario"],
+        tags: ["Covos", "Oceano", "Centro Comunitário"],
         image: "./Imagens/aquario/ostra.png"
     },
     {
         title: "Ófis",
-        tags: ["lagos","inverno" , "qualquer horário"],
+        tags: ["Lagos","Inverno" , "Qualquer Horário"],
         image: "./Imagens/aquario/Ófis.png"
     },
     {
         title: "Peixe-fantasma",
-        tags: ["minas","20º, 60º andar", "primavera","verão", "outono","inverno", "qualquer horário", "centro comunitario"],
+        tags: ["Minas","20º, 60º andar", "Primavera","Verão", "Outono","Inverno", "Qualquer Horário", "Centro Comunitário"],
         image: "./Imagens/aquario/peixe-fantasma.png"
     },
     {
         title: "Peixe-gato",
-        tags: ["lagos", "primavera","verão", "outono","inverno", "qualquer horário", "centro comunitario"],
+        tags: ["Lagos", "Primavera","Verão", "Outono","Inverno", "Qualquer Horário", "Centro Comunitário"],
         image: "./Imagens/aquario/peixe-gato.png"
     },
     {
         title: "Peixe-Leão",
-        tags: ["ilha gengibre", "primavera","verão", "outono","inverno", "qualquer horário"],
+        tags: ["Ilha Gengibre", "Primavera","Verão", "Outono","Inverno", "Qualquer Horário"],
         image: "./Imagens/aquario/Peixe-Leão.png"
     },
     {
         title: "Peixe-pedra",
-        tags: ["minas", "20º andar","primavera","verão", "outono","inverno", "qualquer horário"],
+        tags: ["Minas", "20º andar","Primavera","Verão", "Outono","Inverno", "Qualquer Horário"],
         image: "./Imagens/aquario/Peixe-pedra.png"
     },
     {
-        title: "Peixe-sol",
-        tags: ["rios", "primavera", "verão", "6:00 – 19:00","sol", "centro comunitario"],
-        image: "./Imagens/aquario/peixe-sol.png"
+        title: "Peixe-Sol",
+        tags: ["Rios", "Primavera", "Verão", "6:00 – 19:00","Sol", "Centro Comunitário"],
+        image: "./Imagens/aquario/peixe-Sol.png"
     },
     {
         title: "Pepino-do-mar",
-        tags: ["oceano", "outono","inverno", "6:00 – 19:00"],
+        tags: ["Oceano", "Outono","Inverno", "6:00 – 19:00"],
         image: "./Imagens/aquario/Pepino-do-mar.png"
     },
     {
         title: "Perca",
-        tags: ["rios", "lagos","inverno", "qualquer horário"],
+        tags: ["Rios", "Lagos","Inverno", "Qualquer Horário"],
         image: "./Imagens/aquario/Perca.png"
     },
     {
         title: "Picão-verde",
-        tags: ["rios", "outono","chuvoso", "12:00 – 2:00", "centro comunitario"],
+        tags: ["Rios", "Outono","Chuvoso", "12:00 – 2:00", "Centro Comunitário"],
         image: "./Imagens/aquario/picao-verde.png"
     },
     {
         title: "Polvo",
-        tags: ["oceano", "lagos","verão", "6:00 - 13:00"],
+        tags: ["Oceano", "Lagos","Verão", "6:00 - 13:00"],
         image: "./Imagens/aquario/Polvo.png"
     },
     {
         title: "Salmão",
-        tags: ["rios", "outono", "6:00 - 19:00"],
+        tags: ["Rios", "Outono", "6:00 - 19:00"],
         image: "./Imagens/aquario/Salmão.png"
     },
     {
         title: "Salmão híbrido",
-        tags: ["rios", "primavera", "inverno", "6:00 – 19:00", "centro comunitario"],
+        tags: ["Rios", "Primavera", "Inverno", "6:00 – 19:00", "Centro Comunitário"],
         image: "./Imagens/aquario/salmao-hibrido.png"
     },
     {
         title: "Salmão mutante",
-        tags: ["Covil dos Insetos Mutantes", "primavera","verão", "outono","inverno", "qualquer horário"],
+        tags: ["Covil dos Insetos Mutantes", "Primavera","Verão", "Outono","Inverno", "Qualquer Horário"],
         image: "./Imagens/aquario/Salmão mutante.png"
     },
     {
         title: "Salmão nulo",
-        tags: ["Pântano da bruxa", "primavera","verão", "outono","inverno", "qualquer horário", "centro comunitario"],
+        tags: ["Pântano da bruxa", "Primavera","Verão", "Outono","Inverno", "Qualquer Horário", "Centro Comunitário"],
         image: "./Imagens/aquario/Salmão nulo.png"
     },
     {
         title: "Salmonete",
-        tags: ["oceano", "verão","inverno", "6:00 - 19:00"],
+        tags: ["Oceano", "Verão","Inverno", "6:00 - 19:00"],
         image: "./Imagens/aquario/Salmonete.png"
     },
     {
         title: "Sardinha",
-        tags: ["oceano", "primavera", "outono","inverno", "6:00 – 19:00", "centro comunitario"],
+        tags: ["Oceano", "Primavera", "Outono","Inverno", "6:00 – 19:00", "Centro Comunitário"],
         image: "./Imagens/aquario/sardinha.png"
     },
     {
         title: "Superpepino",
-        tags: ["oceano","ilha gengibre", "verão","outono", "18:00 - 2:00"],
+        tags: ["Oceano","Ilha Gengibre", "Verão","Outono", "18:00 - 2:00"],
         image: "./Imagens/aquario/Superpepino.png"
     },
     {
         title: "Tilápia",
-        tags: ["oceano", "verão","inverno", "6:00 – 14:00", "centro comunitario"],
+        tags: ["Oceano", "Verão","Inverno", "6:00 – 14:00", "Centro Comunitário"],
         image: "./Imagens/aquario/tilapia.png"
     },
     {
         title: "Truta arco-íris",
-        tags: ["rios","lagos", "verão","sol", "6:00 - 19:00"],
+        tags: ["Rios","Lagos", "Verão","Sol", "6:00 - 19:00"],
         image: "./Imagens/aquario/Truta arco-íris.png"
     },
     //mercado
@@ -636,56 +638,56 @@
         tags: ["mercado noturno"],
         image: "./Imagens/aquario/Peixe-bolha.png"
     },
-    //lendários
+    //lendáRios
     {
         title: "Peixe-carmim",
-        tags: ["oceano","pier", "verão", "qualquer horário", "lendário"],
+        tags: ["Oceano","pier", "Verão", "Qualquer Horário", "lendário"],
         image: "./Imagens/aquario/Peixe-carmim.png"
     },
     {
         title: "Tamboril",
-        tags: ["rios","ponte", "outono", "qualquer horário", "lendário"],
+        tags: ["Rios","ponte", "Outono", "Qualquer Horário", "lendário"],
         image: "./Imagens/aquario/Tamboril.png"
     },
     {
         title: "Lenda",
-        tags: ["oceano", "primavera","chuvoso", "qualquer horário", "lendário"],
+        tags: ["Oceano", "Primavera","Chuvoso", "Qualquer Horário", "lendário"],
         image: "./Imagens/aquario/Lenda.png"
     },
     {
         title: "Peixe-gelo",
-        tags: ["Floresta Cinzaseiva.","inverno", "qualquer horário", "lendário"],
+        tags: ["Floresta Cinzaseiva.","Inverno", "Qualquer Horário", "lendário"],
         image: "./Imagens/aquario/Peixe-gelo.png"
     },
     {
         title: "Carpa mutante",
-        tags: ["Esgotos", "primavera","verão", "outono","inverno","qualquer horário", "lendário"],
+        tags: ["Esgotos", "Primavera","Verão", "Outono","Inverno","Qualquer Horário", "lendário"],
         image: "./Imagens/aquario/Carpa mutante.png"
     },
-    //lendarios II
+    //lendaRios II
     {
         title: "Filho do Peixe-Carmim",
-        tags: ["oceano","pier", "primavera","verão", "outono","inverno", "qualquer horário", "lendário"],
+        tags: ["Oceano","pier", "Primavera","Verão", "Outono","Inverno", "Qualquer Horário", "lendário"],
         image: "./Imagens/aquario/Filho do Peixe-Carmim.png"
     },
     {
         title: "Srta. Tamboril",
-        tags: ["rios","ponte","primavera","verão", "outono","inverno", "qualquer horário", "lendário"],
+        tags: ["Rios","ponte","Primavera","Verão", "Outono","Inverno", "Qualquer Horário", "lendário"],
         image: "./Imagens/aquario/Srta. Tamboril.png"
     },
     {
         title: "Lenda II",
-        tags: ["oceano", "primavera","verão", "outono","inverno", "qualquer horário", "lendário"],
+        tags: ["Oceano", "Primavera","Verão", "Outono","Inverno", "Qualquer Horário", "lendário"],
         image: "./Imagens/aquario/Lenda II.png"
     },
     {
         title: "Peixe-Gelo Jr.",
-        tags: ["Floresta Cinzaseiva.","primavera","verão", "outono","inverno",, "qualquer horário", "lendário"],
+        tags: ["Floresta Cinzaseiva.","Primavera","Verão", "Outono","Inverno",, "Qualquer Horário", "lendário"],
         image: "./Imagens/aquario/Peixe-Gelo Jr..png"
     },
     {
         title: "Carpa Radioativa",
-        tags: ["Esgotos", "primavera","verão", "outono","inverno","qualquer horário", "lendário"],
+        tags: ["Esgotos", "Primavera","Verão", "Outono","Inverno","Qualquer Horário", "lendário"],
         image: "./Imagens/aquario/Carpa Radioativa.png"
     },
 
@@ -720,21 +722,21 @@
     for (var tag of item.tags) {
         // Adicione a classe correspondente da estação à tag
         var tagClass = "";
-        if (tag === "primavera") {
+        if (tag === "Primavera") {
             tagClass = "spring";
-        } else if (tag === "verão") {
+        } else if (tag === "Verão") {
             tagClass = "summer";
-        } else if (tag === "outono") {
+        } else if (tag === "Outono") {
             tagClass = "autumn";
-        } else if (tag === "inverno") {
+        } else if (tag === "Inverno") {
             tagClass = "winter";
         }else if (tag === "lendário") {
             tagClass = "legend";
         }
-        else if (tag === "chuvoso") {
-            tagClass = "chuvoso";
+        else if (tag === "Chuvoso") {
+            tagClass = "Chuvoso";
         }
-        else if (tag === "centro comunitario") {
+        else if (tag === "Centro Comunitário") {
             tagClass = "centro";
         }
         

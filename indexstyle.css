@@ -1,0 +1,17 @@
+body {
+    overflow-x: hidden;
+    background-image: url("./Imagens/background/02.jpg" );
+    background-size: 90%;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+.container{
+    color: white !important;
+}
+.cabecalho {
+   padding-top: 5vh;
+
+}
+
