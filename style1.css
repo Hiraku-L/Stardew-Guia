@@ -73,3 +73,17 @@ body {
     width: 400px;
     padding-bottom: 20px;
 }
+@media only screen and (max-width: 1366px) {
+    .p1{
+        font-size: 30px;
+        color: rgb(0, 0, 0);
+        /*-webkit-text-fill-color: rgb(0, 0, 0); /* Will override color (regardless of order) */
+        /*-webkit-text-stroke: 2px rgb(255, 255, 255); */
+        text-shadow:
+        3px 3px 0 #ffffff,
+        -3px 3px 0 #ffffff,
+        -3px -3px 0 #ffffff,
+        3px -3px 0 #ffffff;
+    
+    }
+  }
