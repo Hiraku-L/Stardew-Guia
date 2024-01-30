@@ -79,6 +79,31 @@
     </style>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top bg-dark pt-3 p-md-3 pd-5" >
+    
+        <div class="container " >
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="./index.html">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Serviços</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link text-white" href="#">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     <section class="container">
         <h2 class="text-center mb-2">Receitas</h2>
         <div class="receitas">
@@ -245,6 +270,12 @@
                 </label>
             </div>
             <div class="checkbox-container">
+                <input type="checkbox" id="tortaRuibarbo">
+                <label for="tortaRuibarbo" class="checkbox-image">
+                    <img src="Imagens/receitas/tortaRuibarbo.png">
+                </label>
+            </div>
+            <div class="checkbox-container">
                 <input type="checkbox" id="Biscoitos">
                 <label for="Biscoitos" class="checkbox-image">
                     <img src="Imagens/receitas/Biscoitos.png">
@@ -305,8 +336,8 @@
                 </label>
             </div>
             <div class="checkbox-container">
-                <input type="checkbox" id="cogumelo_frito">
-                <label for="cogumelo_frito" class="checkbox-image">
+                <input type="checkbox" id="sorvete">
+                <label for="sorvete" class="checkbox-image">
                 <img src="Imagens/receitas/sorvete.png">
                 </label>
             </div>
@@ -1613,6 +1644,7 @@
         const sopa_de_truta = document.getElementById('sopa_de_truta');
         const bolo_chocolate = document.getElementById('bolo_chocolate');
         const bolo_rosa = document.getElementById('bolo_rosa');
+        const tortaRuibarbo = document.getElementById('tortaRuibarbo');
         const Biscoitos = document.getElementById('Biscoitos');
         const espaguetes = document.getElementById('espaguetes');
         const EnguiaFrita = document.getElementById('EnguiaFrita');
@@ -1623,6 +1655,7 @@
         const PratoVermelho = document.getElementById('PratoVermelho');
         const ParmesaoBerinjela = document.getElementById('ParmesaoBerinjela');
         const PudimArroz = document.getElementById('PudimArroz');
+        const sorvete = document.getElementById('sorvete')
         const cogumelo_frito = document.getElementById('cogumelo_frito');
         const TortaMirtilo = document.getElementById('TortaMirtilo');
         const PratoOutono = document.getElementById('PratoOutono');
@@ -2178,6 +2211,211 @@
         _camarao.textContent = camarao;
         _cogumelo_comum.textContent = cogumelo_comum;
     });
+    sopa_de_truta.addEventListener('change', function() {
+        if (sopa_de_truta.checked) {
+            truta_arco_iris = truta_arco_iris - 1;
+            algas_verdes = algas_verdes - 1;
+        } else {
+            truta_arco_iris = truta_arco_iris + 1;
+            algas_verdes = algas_verdes + 1;
+        }
+        _truta_arco_iris.textContent = truta_arco_iris;
+        _algas_verdes.textContent = algas_verdes;
+    });
+    bolo_chocolate.addEventListener('change', function() {
+        if (bolo_chocolate.checked) {
+            farinha = farinha - 1;
+            acucar = acucar - 1;
+            ovo = ovo - 1;
+        } else {
+            farinha = farinha + 1;
+            acucar = acucar + 1;
+            ovo = ovo + 1;
+        }
+        _farinha.textContent = farinha;
+        _acucar.textContent = acucar;
+        _ovo.textContent = ovo;
+    });
+    bolo_rosa.addEventListener('change', function() {
+            if (bolo_rosa.checked) {
+                melao = melao - 1;
+                farinha = farinha - 1;
+                acucar = acucar - 1;
+                 ovo = ovo - 1;
+            } 
+            else {
+                melao = melao + 1;
+                farinha = farinha + 1;
+                acucar = acucar + 1;
+                ovo = ovo + 1;
+            }
+            _melao.textContent = melao;
+            _farinha.textContent = farinha;
+            _acucar.textContent = acucar;
+            _ovo.textContent = ovo;
+        });
+        tortaRuibarbo.addEventListener('change', function() {
+        if (tortaRuibarbo.checked) {
+            ruibarbo = ruibarbo - 1;
+            acucar = acucar - 1;
+            farinha = farinha - 1;
+        } else {
+            ruibarbo = ruibarbo + 1;
+            acucar = acucar + 1;
+            farinha = farinha + 1;
+        }
+        _ruibarbo.textContent = ruibarbo;
+        _acucar.textContent = acucar;
+        _farinha.textContent = farinha;
+    });
+    Biscoitos.addEventListener('change', function() {
+            if (Biscoitos.checked) {
+                farinha = farinha - 1;
+                acucar = acucar - 1;
+                 ovo = ovo - 1;
+            } 
+            else {
+                farinha = farinha + 1;
+                acucar = acucar + 1;
+                ovo = ovo + 1;
+            }
+            _farinha.textContent = farinha;
+            _acucar.textContent = acucar;
+            _ovo.textContent = ovo;
+        });
+        espaguetes.addEventListener('change', function() {
+        if (espaguetes.checked) {
+            tomate = tomate - 1;
+            farinha = farinha - 1;
+        } else {
+            tomate = tomate + 1;
+            farinha = farinha + 1;
+        }
+        _tomate.textContent = tomate;
+        _farinha.textContent = farinha;
+    });
+    EnguiaFrita.addEventListener('change', function() {
+        if (EnguiaFrita.checked) {
+            enguia = enguia - 1;
+            oleo = oleo - 1;
+        } else {
+            enguia = enguia + 1;
+            oleo = oleo + 1;
+        }
+        _enguia.textContent = enguia;
+        _oleo.textContent = oleo;
+    });
+    enguiaPicante.addEventListener('change', function() {
+        if (enguiaPicante.checked) {
+            enguia = enguia - 1;
+            pimenta_quente = pimenta_quente - 1;
+        } else {
+            enguia = enguia + 1;
+            pimenta_quente = pimenta_quente + 1;
+        }
+        _enguia.textContent = enguia;
+        _pimenta_quente.textContent = pimenta_quente;
+    });
+    Sashimi.addEventListener('change', function() {
+        if (Sashimi.checked) {
+            qualquer_peixe = qualquer_peixe - 1;
+        } else {
+            qualquer_peixe = qualquer_peixe + 1;
+        }
+        _qualquer_peixe.textContent = qualquer_peixe;
+    });
+    rolinhosArroz.addEventListener('change', function() {
+            if (rolinhosArroz.checked) {
+                qualquer_peixe = qualquer_peixe - 1;
+                algas_marinhas = algas_marinhas - 1;
+                 arroz = arroz - 1;
+            } 
+            else {
+                qualquer_peixe = qualquer_peixe + 1;
+                algas_marinhas = algas_marinhas + 1;
+                arroz = arroz + 1;
+            }
+            _qualquer_peixe.textContent = qualquer_peixe;
+            _algas_marinhas.textContent = algas_marinhas;
+            _arroz.textContent = arroz;
+        });
+        Tortilha.addEventListener('change', function() {
+        if (Tortilha.checked) {
+            milho = milho - 1;
+        } else {
+            milho = milho + 1;
+        }
+        _milho.textContent = milho;
+    });
+    PratoVermelho.addEventListener('change', function() {
+        if (PratoVermelho.checked) {
+            repolho_roxo = repolho_roxo - 1;
+            rabanete = rabanete - 1;
+        } else {
+            repolho_roxo = repolho_roxo + 1;
+            rabanete = rabanete + 1;
+        }
+        _repolho_roxo.textContent = repolho_roxo;
+        _rabanete.textContent = rabanete;
+    });
+    ParmesaoBerinjela.addEventListener('change', function() {
+        if (ParmesaoBerinjela.checked) {
+            berinjela = berinjela - 1;
+            tomate = tomate - 1;
+        } else {
+            berinjela = berinjela + 1;
+            tomate = tomate + 1;
+        }
+        _berinjela.textContent = berinjela;
+        _tomate.textContent = tomate;
+    });
+    PudimArroz.addEventListener('change', function() {
+            if (PudimArroz.checked) {
+                leite = leite - 1;
+                acucar = acucar - 1;
+                 arroz = arroz - 1;
+            } 
+            else {
+                leite = leite + 1;
+                acucar = acucar + 1;
+                arroz = arroz + 1;
+            }
+            _leite.textContent = leite;
+            _acucar.textContent = acucar;
+            _arroz.textContent = arroz;
+        });
+        sorvete.addEventListener('change', function() {
+            if (sorvete.checked) {
+                leite = leite - 1;
+                acucar = acucar - 1;
+            } 
+            else {
+                leite = leite + 1;
+                acucar = acucar + 1;
+            }
+            _leite.textContent = leite;
+            _acucar.textContent = acucar;
+        });
+        TortaMirtilo.addEventListener('change', function() {
+            if (TortaMirtilo.checked) {
+                farinha = farinha - 1;
+                acucar = acucar - 1;
+                 ovo = ovo - 1;
+                 mirtilo = mirtilo - 1;
+
+            } 
+            else {
+                farinha = farinha + 1;
+                acucar = acucar + 1;
+                mirtilo = mirtilo + 1;
+                ovo = ovo + 1;
+            }
+            _farinha.textContent = farinha;
+            _acucar.textContent = acucar;
+            _mirtilo.textContent = mirtilo;
+            _ovo.textContent = ovo;
+
+        });
     </script>
 </body>
 </html>
