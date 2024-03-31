@@ -366,6 +366,12 @@
                 </label>
             </div>
             <div class="checkbox-container">
+                <input type="checkbox" id="MolhoOxicoco">
+                <label for="MolhoOxicoco" class="checkbox-image">
+                <img src="Imagens/receitas/MolhoOxicoco.png">
+                </label>
+            </div>
+            <div class="checkbox-container">
                 <input type="checkbox" id="recheio">
                 <label for="recheio" class="checkbox-image">
                 <img src="Imagens/receitas/recheio.png">
@@ -1661,6 +1667,7 @@
         const PratoOutono = document.getElementById('PratoOutono');
         const SopaAbobora = document.getElementById('SopaAbobora');
         const superprato = document.getElementById('superprato');
+        const MolhoOxicoco = document.getElementById('MolhoOxicoco');
         const recheio = document.getElementById('recheio');
         const almocoFazendeiro = document.getElementById('almocoFazendeiro');
         const HamburguerSobrevivencia = document.getElementById('HamburguerSobrevivencia');
@@ -2415,6 +2422,142 @@
             _mirtilo.textContent = mirtilo;
             _ovo.textContent = ovo;
 
+        });
+        PratoOutono.addEventListener('change', function() {
+            if (PratoOutono.checked) {
+                inhame = inhame - 1;
+                abobora = abobora - 1;
+            } 
+            else {
+                inhame = inhame + 1;
+                abobora = abobora + 1;
+            }
+            _inhame.textContent = inhame;
+            _abobora.textContent = abobora;
+        });
+        superprato.addEventListener('change', function() {
+            if (superprato.checked) {
+                couve_chinesa = couve_chinesa - 1;
+                oxicoco = oxicoco - 1;
+                 alcachofra = alcachofra - 1;
+            } 
+            else {
+                couve_chinesa = couve_chinesa + 1;
+                oxicoco = oxicoco + 1;
+                alcachofra = alcachofra + 1;
+            }
+            _couve_chinesa.textContent = couve_chinesa;
+            _oxicoco.textContent = oxicoco;
+            _alcachofra.textContent = alcachofra;
+        });
+        MolhoOxicoco.addEventListener('change', function() {
+            if (MolhoOxicoco.checked) {
+                oxicoco = oxicoco - 1;
+                acucar = acucar - 1;
+            } 
+            else {
+                oxicoco = oxicoco + 1;
+                acucar = acucar + 1;
+            }
+            _oxicoco.textContent = oxicoco;
+            _acucar.textContent = acucar;
+        });
+        recheio.addEventListener('change', function() {
+            if (recheio.checked) {
+                pao1 = pao1 - 1;
+                oxicoco = oxicoco - 1;
+                 avela = avela - 1;
+            } 
+            else {
+                pao1 = pao1 + 1;
+                oxicoco = oxicoco + 1;
+                avela = avela + 1;
+            }
+            _pao1.textContent = pao1;
+            _oxicoco.textContent = oxicoco;
+            _avela.textContent = avela;
+        });
+        almocoFazendeiro.addEventListener('change', function() {
+            if (almocoFazendeiro.checked) {
+                omelete1 = omelete1 - 1;
+                chirivia = chirivia - 1;
+            } 
+            else {
+                omelete1 = omelete1 + 1;
+                chirivia = chirivia + 1;
+            }
+            _omelete1.textContent = omelete1;
+            _chirivia.textContent = chirivia;
+        });
+        HamburguerSobrevivencia.addEventListener('change', function() {
+            if (HamburguerSobrevivencia.checked) {
+                pao1 = pao1 - 1;
+                cenoura_subterranea = cenoura_subterranea - 1;
+                 berinjela = berinjela - 1;
+            } 
+            else {
+                pao1 = pao1 + 1;
+                cenoura_subterranea = cenoura_subterranea + 1;
+                berinjela = berinjela + 1;
+            }
+            _pao1.textContent = pao1;
+            _cenoura_subterranea.textContent = cenoura_subterranea;
+            _berinjela.textContent = berinjela;
+        });
+        pratoMar.addEventListener('change', function() {
+            if (pratoMar.checked) {
+                sardinha = sardinha - 1;
+                batataPalha1 = batataPalha1 - 1;
+            } 
+            else {
+                sardinha = sardinha + 1;
+                batataPalha1 = batataPalha1 + 1;
+            }
+            _sardinha.textContent = sardinha;
+            _batataPalha1.textContent = batataPalha1;
+        });
+        //refeicao mineiro consertar
+        CafeExpressoTriplo.addEventListener('change', function() {
+            if (CafeExpressoTriplo.checked) {
+                cafe = cafe - 1;
+            } 
+            else {
+                cafe = cafe + 1;
+            }
+            _cafe.textContent = cafe;
+        });
+        PudimEspumaMar.addEventListener('change', function() {
+            if (PudimEspumaMar.checked) {
+                linguado = linguado - 1;
+                carpa_da_meia_noite = carpa_da_meia_noite - 1;
+                 tinta_de_lula = tinta_de_lula - 1;
+            } 
+            else {
+                linguado = linguado + 1;
+                carpa_da_meia_noite = carpa_da_meia_noite + 1;
+                tinta_de_lula = tinta_de_lula + 1;
+            }
+            _linguado.textContent = linguado;
+            _carpa_da_meia_noite.textContent = carpa_da_meia_noite;
+            _tinta_de_lula.textContent = tinta_de_lula;
+        });
+        SopaAlga.addEventListener('change', function() {
+            if (SopaAlga.checked) {
+                algas_verdes = algas_verdes - 4;
+            } 
+            else {
+                algas_verdes = algas_verdes + 4;
+            }
+            _algas_verdes.textContent = algas_verdes;
+        });
+        CaldoPalido.addEventListener('change', function() {
+            if (CaldoPalido.checked) {
+                algas_brancas = algas_brancas - 2;
+            } 
+            else {
+                algas_brancas = algas_brancas +2;
+            }
+            _algas_brancas.textContent = algas_brancas;
         });
     </script>
 </body>
